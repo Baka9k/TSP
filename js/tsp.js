@@ -26,7 +26,7 @@ dots.variables = {
 	lineWidth: 0.1,
 	connectionLineWidth: 3,
 	font: '10px Arial',
-	buttonFont: '30px Arial Black',
+	buttonFont: '20px Arial Black',
 	canvas: "",
 	context: "",
 	width: 0,
@@ -80,6 +80,7 @@ dots.renderingTemporaryVariables = {
 };
 
 dots.buttons = {
+	/*
 	connectionMode: {
 		name: "connectionMode",
 		offsetRight: 50,
@@ -89,6 +90,29 @@ dots.buttons = {
 		text: "C",
 		textOffsetX: 8,
 		textOffsetY: 30,
+		enabled: false,
+	},
+	*/
+	calculate: {
+		name: "calculate",
+		offsetRight: 130,
+		offsetBottom: 100,
+		width: 120,
+		height: 40,
+		text: "Calculate",
+		textOffsetX: 8,
+		textOffsetY: 28,
+		enabled: false,
+	},
+	random: {
+		name: "random",
+		offsetRight: 130,
+		offsetBottom: 50,
+		width: 120,
+		height: 40,
+		text: "Random",
+		textOffsetX: 15,
+		textOffsetY: 28,
 		enabled: false,
 	},
 };
