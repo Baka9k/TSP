@@ -1,3 +1,10 @@
+//---------------------- DOTS -------------------------
+
+// Dots.js from https://github.com/Baka9k/dots with some changes:
+// 1)Updated dots.buttons: added 'calculate' and 'random' buttons
+// 2)Updated dots.handleButtonClick() (added new buttons support)
+ 
+
 var dots = {};
 
 
