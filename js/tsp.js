@@ -879,11 +879,24 @@ tsp.inArray = function(array, value) {
 }
 
 
+tsp.carefulSplice = function(array, index) {
+	var splicedArray = new Array();
+	for (var i = 0; i < index; i++) {
+		splicedArray[i] = array[i];
+	}
+	for (var i = index; i < array.length - 1; i++) {
+		splicedArray[i] = array[i+1];
+	}
+	return splicedArray;
+};
+
+
+
 //TODO: tsp.calculate()
 
 tsp.getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 
 //-------------------------------------------------------------------
