@@ -834,7 +834,32 @@ dots.drawLines = function() {
 var tsp = {};
 
 
+tsp.variables = {
+	randomDots: 5,
+};
 
+
+tsp.random = function () {
+	
+	var tvars = dots.renderingTemporaryVariables;
+	
+	var minX = 0;
+	var maxX = dots.variables.width;
+	var minY = 0;
+	var maxY = dots.variables.height;
+	
+	for (var i = 0; i < tsp.variables.randomDots; i++) {
+		var x = tsp.getRandomInt(minX, maxX) + tvars.absoluteDisplacementX;
+		var y = tsp.getRandomInt(minY, maxY) + tvars.absoluteDisplacementY;
+		dots.addDot(x, y);
+	}
+	
+	dots.draw();
+	
+};
+
+
+//TODO: tsp.calculate()
 
 
 
