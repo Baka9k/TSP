@@ -859,6 +859,16 @@ tsp.random = function () {
 };
 
 
+tsp.distanceBetween = function(dot1,dot2) {
+	var x1 = dot1.x;
+	var y1 = dot1.y;
+	var x2 = dot2.x;
+	var y2 = dot2.y;
+	var d = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+	return d; 	
+}
+
+
 //TODO: tsp.calculate()
 
 tsp.getRandomInt = function(min, max) {
