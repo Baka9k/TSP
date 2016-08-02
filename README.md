@@ -1,6 +1,8 @@
 # Travelling salesman problem bruteforce solution
 
 Shows draggable grid, where user can place dots and move them. After clicking on Calculate button calculates shortest possible route that visits each dot exactly once.
+<br>
+Uses code from the project **[dots](https://baka9k.github.io/dots/)**
 
 ##How to use:
 Click on canvas to place dot, move dots with mouse, use Random tool (Random button in bottom right corner or R on keyboard) to place 5 dots randomly. Press Calculate button (or C on keyboard) to calculate route. 
