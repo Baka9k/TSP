@@ -9,7 +9,7 @@ Click on canvas to place dot, move dots with mouse, use Random tool (Random butt
 **[https://baka9k.github.io/tsp/](https://baka9k.github.io/tsp/)**
 
 ##Screenshots:
-![Screenshot 1](https://github.com/baka9k/dots/raw/master/screenshots/1.png)
-![Screenshot 2](https://github.com/baka9k/dots/raw/master/screenshots/2.png)
-![Screenshot 3](https://github.com/baka9k/dots/raw/master/screenshots/3.png)
-![Screenshot 4](https://github.com/baka9k/dots/raw/master/screenshots/4.png)
+![Screenshot 1](https://github.com/baka9k/tsp/raw/master/screenshots/1.png)
+![Screenshot 2](https://github.com/baka9k/tsp/raw/master/screenshots/2.png)
+![Screenshot 3](https://github.com/baka9k/tsp/raw/master/screenshots/3.png)
+![Screenshot 4](https://github.com/baka9k/tsp/raw/master/screenshots/4.png)
