@@ -891,6 +891,21 @@ tsp.carefulSplice = function(array, index) {
 };
 
 
+tsp.getPermutations = function(array) {
+	if (array.length == 1) {
+		return [array];
+	}
+	var allPermutations = new Array();
+	for (var i = 0; i < array.length; i++) {
+		var permutation = tsp.getPermutations(tsp.carefulSplice(array, i));
+		for (var j = 0; j < permutation.length; j++) {
+			permutation[j].unshift(array[i]);
+			allPermutations.push(permutation[j]);
+		}
+	}  
+	return allPermutations;
+};
+
 
 //TODO: tsp.calculate()
 
