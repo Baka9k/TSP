@@ -447,6 +447,12 @@ dots.handleButtonClick = function(button) {
 			dots.variables.connectionModeEnabled = !dots.variables.connectionModeEnabled;
 			buttons.connectionMode.enabled = !buttons.connectionMode.enabled;
 			break;
+		case "random":
+			tsp.random();
+			break;
+		case "connectionMode":
+			tsp.calculate();
+			break;
 		default:
 			console.log("dots.handleButtonClick() received unknown type of button!");
 			return;
