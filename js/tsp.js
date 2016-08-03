@@ -975,6 +975,16 @@ tsp.drawAllPossibleRoutes = function() {
 };
 
 
+tsp.draw = function() {
+
+	if (!tsp.variables.calculated) return;
+	
+	tsp.drawAllPossibleRoutes();
+	tsp.drawShortestRoute(shortestRoute);
+	
+};
+
+
 tsp.calculate = function() {
 	
 	if (tsp.variables.calculated) return;
