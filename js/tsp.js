@@ -458,7 +458,7 @@ dots.handleButtonClick = function(button) {
 		case "random":
 			tsp.random();
 			break;
-		case "connectionMode":
+		case "calculate":
 			tsp.calculate();
 			break;
 		default:
