@@ -5,6 +5,7 @@
 // 2)Updated dots.handleButtonClick(): added new buttons support
 // 3)Updated dots.draw(): added line 'tsp.draw()'
 // 4)Updated dots.handleMouseEvent(): disallow to add new dot when route is already calculated
+// 5)Updated dots.handleKeyDown(): R and C keys
  
 
 var dots = {};
@@ -223,7 +224,10 @@ dots.handleKeyDown = function(event) {
 			dots.camera.right();
 			break;
 		case 67:
-			dots.variables.connectionModeEnabled = !dots.variables.connectionModeEnabled;
+			tsp.calculate();
+			break;
+		case 82:
+			tsp.random();
 			break;
 		default:
 			return;
@@ -234,6 +238,7 @@ dots.handleKeyDown = function(event) {
 	//→    39
 	//↓    40
 	//c C  67
+	//r R  82
 	
 	dots.draw();
 	
