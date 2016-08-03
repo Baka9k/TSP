@@ -986,12 +986,17 @@ tsp.drawAllPossibleRoutes = function() {
 tsp.drawShortestRoute = function() {
 	
 	var route = tsp.variables.shortestRoute;
+	var tvars = dots.renderingTemporaryVariables;
 	
 	for (var i = 1; i < route.length; i++) {
 		var startDot = route[i-1];
 		var endDot = route[i];
 		var color = tsp.variables.colors.route;
-		dots.drawConnectionLine(startDot.x, startDot.y, endDot.x, endDot.y, color);	
+		var startX = startDot.x - tvars.absoluteDisplacementX;
+		var startY = startDot.y - tvars.absoluteDisplacementY;
+		var endX = endDot.x - tvars.absoluteDisplacementX;
+		var endY = endDot.y - tvars.absoluteDisplacementY;
+		dots.drawConnectionLine(startX, startY, endX, endY, color);
 	}
 	
 };
