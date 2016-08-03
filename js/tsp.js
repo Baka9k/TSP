@@ -841,7 +841,7 @@ tsp.variables = {
 	//How many dots adds tsp.random()
 	randomDots: 5,
 	colors: {
-		possibleRoute: "#00CED1",
+		possibleRoute: "rgba(0, 206, 209, 0.2)",
 		route: "#7FFF00",
 	},
 	calculated: false,
