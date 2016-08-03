@@ -952,7 +952,15 @@ tsp.brute = function() {
 };
 
 
-//TODO: tsp.calculate()
+tsp.calculate = function() {
+	
+	if (dots.data.dotsarray.length < 2) return;
+	
+	tsp.drawAllPossibleRoutes();
+	var shortestRoute = tsp.brute();
+	tsp.drawShortestRoute(shortestRoute);
+	
+};
 
 tsp.getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
