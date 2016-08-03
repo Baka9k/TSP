@@ -866,8 +866,8 @@ tsp.distanceBetween = function(dot1,dot2) {
 	var y1 = dot1.y;
 	var x2 = dot2.x;
 	var y2 = dot2.y;
-	var d = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-	return d; 	
+	var distance = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+	return distance;
 }
 
 
@@ -891,6 +891,22 @@ tsp.carefulSplice = function(array, index) {
 		splicedArray[i] = array[i+1];
 	}
 	return splicedArray;
+};
+
+
+tsp.getIndexOfMin = function(array) {
+    if (array.length === 0) {
+        return -1;
+    }
+    var max = array[0];
+    var maxIndex = 0;
+    for (var i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            maxIndex = i;
+            max = array[i];
+        }
+    }
+    return maxIndex;
 };
 
 
