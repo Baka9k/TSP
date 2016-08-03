@@ -908,7 +908,7 @@ tsp.getIndexOfMin = function(array) {
         return -1;
     }
     var min = array[0];
-    var min Index = 0;
+    var minIndex = 0;
     for (var i = 1; i < array.length; i++) {
         if (array[i] < min) {
             maxIndex = i;
