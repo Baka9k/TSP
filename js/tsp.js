@@ -835,11 +835,13 @@ var tsp = {};
 
 
 tsp.variables = {
+	//How many dots adds tsp.random()
 	randomDots: 5,
 };
 
 
 tsp.random = function () {
+	//Adds some randomly placed dots in dotsarray
 	
 	var tvars = dots.renderingTemporaryVariables;
 	
@@ -880,6 +882,7 @@ tsp.inArray = function(array, value) {
 
 
 tsp.carefulSplice = function(array, index) {
+	//returns spliced array without modifying original array
 	var splicedArray = new Array();
 	for (var i = 0; i < index; i++) {
 		splicedArray[i] = array[i];
@@ -892,6 +895,7 @@ tsp.carefulSplice = function(array, index) {
 
 
 tsp.getPermutations = function(array) {
+	//Returns array of arrays with all possible permutations of input array elements
 	if (array.length == 1) {
 		return [array];
 	}
@@ -907,7 +911,7 @@ tsp.getPermutations = function(array) {
 };
 
 
-//TODO: tsp.calculate()
+//TODO: tsp.calculate(), tsp.brute()
 
 tsp.getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
