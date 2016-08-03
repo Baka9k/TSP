@@ -842,6 +842,7 @@ tsp.variables = {
 		route: "#7FFF00",
 	},
 	calculated: false,
+	shortestRoute: "",
 };
 
 
