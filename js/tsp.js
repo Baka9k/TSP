@@ -965,10 +965,9 @@ tsp.drawAllPossibleRoutes = function() {
 	
 	var dotsarray = dots.data.dotsarray;
 	
-	var halflength = Math.ceil(dotsarray.length / 2);
-	for (var i = 0; i < halflength; i++) {
+	for (var i = 0; i < dotsarray.length; i++) {
 		for (var j = 0; j < dotsarray.length; j++) {
-			if (i == j) continue;
+			if (i > j) continue;
 			var startDot = dotsarray[i];
 			var endDot = dotsarray[j];
 			var color = tsp.variables.colors.possibleRoute;
@@ -998,7 +997,7 @@ tsp.draw = function() {
 	if (!tsp.variables.calculated) return;
 	
 	tsp.drawAllPossibleRoutes();
-	tsp.drawShortestRoute();
+	//tsp.drawShortestRoute();
 	
 };
 
