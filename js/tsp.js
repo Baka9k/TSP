@@ -841,6 +841,7 @@ tsp.variables = {
 		possibleRoute: "#00CED1",
 		route: "#7FFF00",
 	},
+	calculated: false,
 };
 
 
@@ -976,11 +977,14 @@ tsp.drawAllPossibleRoutes = function() {
 
 tsp.calculate = function() {
 	
+	if (tsp.variables.calculated) return;
 	if (dots.data.dotsarray.length < 2) return;
 	
 	tsp.drawAllPossibleRoutes();
 	var shortestRoute = tsp.brute();
 	tsp.drawShortestRoute(shortestRoute);
+	
+	tsp.variables.calculated = true;
 	
 };
 
