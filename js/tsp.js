@@ -927,7 +927,32 @@ tsp.getPermutations = function(array) {
 };
 
 
-//TODO: tsp.calculate(), tsp.brute()
+tsp.brute = function() {
+	
+	var dotsarray = dots.data.dotsarray;
+	
+	var routes = tsp.getPermutations(dotsarray);
+	var distances = new Array(routes.length);
+	
+	for (var i = 0; i < routes.length; i++) {
+		var route = routes[i];
+		//Return salesman to the origin city:
+		route.push(route[0]);
+		var distance = 0;
+		for (var j = 1; j < route.length; j++) {
+			distance += tsp.distanceBetween(route[j], route[j-1]);
+		}
+		distances[i] = distance;
+	}
+	var shortestRouteNumber = tsp.getIndexOfMin(distances);
+	var shortestRoute = routes[shortestRouteNumber];
+	
+	return shortestRoute;
+	
+};
+
+
+//TODO: tsp.calculate()
 
 tsp.getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
