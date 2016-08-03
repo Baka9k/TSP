@@ -8,7 +8,7 @@ Uses code from the project **[dots](https://github.com/Baka9k/dots)**.
 Click on canvas to place dot, move dots with mouse, use Random tool (Random button in bottom right corner or R on keyboard) to place 5 dots randomly. Press Calculate button (or C on keyboard) to calculate route. 
 
 ##Live demo:
-**[https://baka9k.github.io/tsp/](https://baka9k.github.io/tsp/)**
+**[https://baka9k.github.io/TSP/](https://baka9k.github.io/TSP/)**
 
 ##Screenshots:
 ![Screenshot 1](https://github.com/baka9k/tsp/raw/master/screenshots/1.png)
