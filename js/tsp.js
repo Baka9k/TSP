@@ -999,6 +999,8 @@ tsp.draw = function() {
 	tsp.drawAllPossibleRoutes();
 	tsp.drawShortestRoute();
 	
+	dots.drawDots();
+	
 };
 
 
