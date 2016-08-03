@@ -980,11 +980,12 @@ tsp.calculate = function() {
 	if (tsp.variables.calculated) return;
 	if (dots.data.dotsarray.length < 2) return;
 	
-	tsp.drawAllPossibleRoutes();
 	var shortestRoute = tsp.brute();
-	tsp.drawShortestRoute(shortestRoute);
+	tsp.variables.shortestRoute = shortestRoute;
 	
 	tsp.variables.calculated = true;
+	
+	dots.draw();
 	
 };
 
