@@ -907,15 +907,15 @@ tsp.getIndexOfMin = function(array) {
     if (array.length === 0) {
         return -1;
     }
-    var max = array[0];
-    var maxIndex = 0;
+    var min = array[0];
+    var min Index = 0;
     for (var i = 1; i < array.length; i++) {
-        if (array[i] > max) {
+        if (array[i] < min) {
             maxIndex = i;
-            max = array[i];
+            min = array[i];
         }
     }
-    return maxIndex;
+    return minIndex;
 };
 
 
@@ -997,7 +997,7 @@ tsp.draw = function() {
 	if (!tsp.variables.calculated) return;
 	
 	tsp.drawAllPossibleRoutes();
-	//tsp.drawShortestRoute();
+	tsp.drawShortestRoute();
 	
 };
 
