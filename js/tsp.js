@@ -964,6 +964,7 @@ tsp.brute = function() {
 tsp.drawAllPossibleRoutes = function() {
 	
 	var dotsarray = dots.data.dotsarray;
+	var tvars = dots.renderingTemporaryVariables;
 	
 	for (var i = 0; i < dotsarray.length; i++) {
 		for (var j = 0; j < dotsarray.length; j++) {
@@ -971,7 +972,11 @@ tsp.drawAllPossibleRoutes = function() {
 			var startDot = dotsarray[i];
 			var endDot = dotsarray[j];
 			var color = tsp.variables.colors.possibleRoute;
-			dots.drawConnectionLine(startDot.x, startDot.y, endDot.x, endDot.y, color);
+			var startX = startDot.x - tvars.absoluteDisplacementX;
+			var startY = startDot.y - tvars.absoluteDisplacementY;
+			var endX = endDot.x - tvars.absoluteDisplacementX;
+			var endY = endDot.y - tvars.absoluteDisplacementY;
+			dots.drawConnectionLine(startX, startY, endX, endY, color);
 		}
 	}
 	
