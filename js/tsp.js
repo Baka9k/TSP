@@ -952,6 +952,23 @@ tsp.brute = function() {
 };
 
 
+tsp.drawAllPossibleRoutes = function() {
+	
+	var dotsarray = dots.data.dotsarray;
+	
+	var halflength = Math.ceil(dotsarray.length / 2);
+	for (var i = 0; i < halflength; i++) {
+		for (var j = 0; j < dotsarray.length; j++) {
+			if (i == j) continue;
+			var startDot = dotsarray[i];
+			var endDot = dotsarray[j];
+			tsp.drawPossibleRouteLine(startDot.x, startDot.y, endDot.x, endDot.y);
+		}
+	}
+	
+};
+
+
 tsp.calculate = function() {
 	
 	if (dots.data.dotsarray.length < 2) return;
