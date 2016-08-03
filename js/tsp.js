@@ -637,6 +637,8 @@ dots.draw = function() {
 	dots.drawDots();
 	dots.drawTools();
 	
+	tsp.draw();
+	
 };
 
 
