@@ -4,6 +4,7 @@
 // 1)Updated dots.buttons: added 'calculate' and 'random' buttons
 // 2)Updated dots.handleButtonClick(): added new buttons support
 // 3)Updated dots.draw(): added line 'tsp.draw()'
+// 4)Updated dots.handleMouseEvent(): disallow to add new dot when route is already calculated
  
 
 var dots = {};
@@ -395,7 +396,9 @@ dots.handleMouseEvent = {
 		    if ((displacementX == 0) && (displacementY == 0)) {
 		    	var x = pointerX + tvars.absoluteDisplacementX;
 		    	var y = pointerY + tvars.absoluteDisplacementY;
-		        dots.addDot(x, y);	
+		    	if (!tsp.variables.calculated) {
+		        	dots.addDot(x, y);	
+		        }
 		    }
 		    
 		}
