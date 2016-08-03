@@ -962,7 +962,8 @@ tsp.drawAllPossibleRoutes = function() {
 			if (i == j) continue;
 			var startDot = dotsarray[i];
 			var endDot = dotsarray[j];
-			tsp.drawPossibleRouteLine(startDot.x, startDot.y, endDot.x, endDot.y);
+			var color = tsp.variables.colors.possibleRoute;
+			dots.drawConnectionLine(startDot.x, startDot.y, endDot.x, endDot.y, color);
 		}
 	}
 	
