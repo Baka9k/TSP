@@ -998,7 +998,7 @@ tsp.draw = function() {
 	if (!tsp.variables.calculated) return;
 	
 	tsp.drawAllPossibleRoutes();
-	tsp.drawShortestRoute(shortestRoute);
+	tsp.drawShortestRoute();
 	
 };
 
